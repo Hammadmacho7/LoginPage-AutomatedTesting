@@ -90,7 +90,6 @@ public class TestMain {
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("Kin78+@");
         driver.findElement(By.name("submit")).click();
-
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
         String check = "password length must be more than 8";
@@ -110,7 +109,6 @@ public class TestMain {
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("KIN780HKM");
         driver.findElement(By.name("submit")).click();
-
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
         String check = "Password must contain a lower case letter";
@@ -126,7 +124,6 @@ public class TestMain {
         WebElement password = driver.findElement(By.name("password"));
         email.clear();
         password.clear();
-
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("kin780hkm");
         driver.findElement(By.name("submit")).click();
@@ -144,7 +141,6 @@ public class TestMain {
         WebElement password = driver.findElement(By.name("password"));
         email.clear();
         password.clear();
-
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("Kingkhan++@");
         driver.findElement(By.name("submit")).click();
@@ -163,7 +159,6 @@ public class TestMain {
         WebElement password = driver.findElement(By.name("password"));
         email.clear();
         password.clear();
-
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("King%khan07_!!!!---");
         driver.findElement(By.name("submit")).click();
