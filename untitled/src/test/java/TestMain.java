@@ -177,12 +177,10 @@ public class TestMain {
     public void passwordMustCannothaveSpaces() {
         ChromeDriver driver = createInvisibleChromeDriver();
         driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
-
         WebElement email = driver.findElement(By.name("email"));
         WebElement password = driver.findElement(By.name("password"));
         email.clear();
         password.clear();
-
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("Kingkhan786 +@gahnwe");
         driver.findElement(By.name("submit")).click();
