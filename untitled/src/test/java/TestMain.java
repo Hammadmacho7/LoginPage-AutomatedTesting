@@ -203,7 +203,6 @@ public class TestMain {
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("KingKhan07++bv4321@mn");
         driver.findElement(By.name("submit")).click();
-
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
 
