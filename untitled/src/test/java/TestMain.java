@@ -98,6 +98,26 @@ public class TestMain {
     }
 
     @Test
+    public void passwordlengthSmallerThanEightSuccess() {
+        ChromeDriver driver = createInvisibleChromeDriver();
+        driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
+
+        WebElement email = driver.findElement(By.name("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        email.clear();
+        password.clear();
+
+        email.sendKeys("Hammad786@gmail.com");
+        password.sendKeys("Kin78+@Hmnm");
+        driver.findElement(By.name("submit")).click();
+        String alertMessage = driver.switchTo().alert().getText();
+        System.out.print(alertMessage);
+
+        String check = "Logged in";
+        assertEquals(alertMessage, check);
+    }
+
+    @Test
     public void passwordMustHaveLowerCase() {
         ChromeDriver driver = createInvisibleChromeDriver();
         driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
@@ -118,6 +138,26 @@ public class TestMain {
     }
 
     @Test
+    public void passwordMustHaveLowerCaseSuccess() {
+        ChromeDriver driver = createInvisibleChromeDriver();
+        driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
+
+        WebElement email = driver.findElement(By.name("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        email.clear();
+        password.clear();
+
+        email.sendKeys("Hammad786@gmail.com");
+        password.sendKeys("KIN780HKMmnfr");
+        driver.findElement(By.name("submit")).click();
+        String alertMessage = driver.switchTo().alert().getText();
+        System.out.print(alertMessage);
+
+        String check = "Logged in";
+        assertEquals(alertMessage, check);
+    }
+
+    @Test
     public void passwordMustHaveUpperCase() {
         ChromeDriver driver = createInvisibleChromeDriver();
         driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
@@ -132,6 +172,24 @@ public class TestMain {
         String alertMessage = driver.switchTo().alert().getText();
 
         String check = "Password must contain an upper case letter";
+        assertEquals(alertMessage, check);
+    }
+
+    @Test
+    public void passwordMustHaveUpperCaseSuccess() {
+        ChromeDriver driver = createInvisibleChromeDriver();
+        driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
+
+        WebElement email = driver.findElement(By.name("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        email.clear();
+        password.clear();
+        email.sendKeys("Hammad786@gmail.com");
+        password.sendKeys("kin780hkmHH");
+        driver.findElement(By.name("submit")).click();
+        String alertMessage = driver.switchTo().alert().getText();
+
+        String check = "Logged in";
         assertEquals(alertMessage, check);
     }
 
@@ -155,6 +213,25 @@ public class TestMain {
     }
 
     @Test
+    public void passwordMustHaveNumericDigitSuccess() {
+        ChromeDriver driver = createInvisibleChromeDriver();
+        driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
+
+        WebElement email = driver.findElement(By.name("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        email.clear();
+        password.clear();
+        email.sendKeys("Hammad786@gmail.com");
+        password.sendKeys("Kingkhan++@7");
+        driver.findElement(By.name("submit")).click();
+        String alertMessage = driver.switchTo().alert().getText();
+        System.out.print(alertMessage);
+
+        String check = "Logged in";
+        assertEquals(alertMessage, check);
+    }
+
+    @Test
     public void passwordMustCanOnlyContainPLusOrAtSpecialChars() {
         ChromeDriver driver = createInvisibleChromeDriver();
         driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
@@ -170,6 +247,25 @@ public class TestMain {
         System.out.print(alertMessage);
 
         String check = "Password must contain only '@' and '+' special characters";
+        assertEquals(alertMessage, check);
+    }
+
+    @Test
+    public void passwordMustCanOnlyContainPLusOrAtSpecialCharsSuccess() {
+        ChromeDriver driver = createInvisibleChromeDriver();
+        driver.get("http://localhost:63342/loginpage-selenium/loginpage.html?_ijt=c9s5gibvs260c6qlm42mfd9sok&_ij_reload=RELOAD_ON_SAVE");
+
+        WebElement email = driver.findElement(By.name("email"));
+        WebElement password = driver.findElement(By.name("password"));
+        email.clear();
+        password.clear();
+        email.sendKeys("Hammad786@gmail.com");
+        password.sendKeys("Kingkhan07+@@");
+        driver.findElement(By.name("submit")).click();
+        String alertMessage = driver.switchTo().alert().getText();
+        System.out.print(alertMessage);
+
+        String check = "Logged in";
         assertEquals(alertMessage, check);
     }
 
@@ -209,7 +305,6 @@ public class TestMain {
         String check = "Logged in";
         assertEquals(alertMessage, check);
     }
-
 
 
 
