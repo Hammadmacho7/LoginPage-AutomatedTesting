@@ -200,7 +200,6 @@ public class TestMain {
         WebElement password = driver.findElement(By.name("password"));
         email.clear();
         password.clear();
-
         email.sendKeys("Hammad786@gmail.com");
         password.sendKeys("KingKhan07++bv4321@mn");
         driver.findElement(By.name("submit")).click();
