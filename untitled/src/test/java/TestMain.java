@@ -301,7 +301,6 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
-
         String check = "Logged in";
         assertEquals(alertMessage, check);
     }
