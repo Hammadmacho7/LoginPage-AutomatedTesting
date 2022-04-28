@@ -92,6 +92,7 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
+
         String check = "password length must be more than 8";
         assertEquals(alertMessage, check);
     }
@@ -111,6 +112,7 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
+
         String check = "Password must contain a lower case letter";
         assertEquals(alertMessage, check);
     }
@@ -128,6 +130,7 @@ public class TestMain {
         password.sendKeys("kin780hkm");
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
+
         String check = "Password must contain an upper case letter";
         assertEquals(alertMessage, check);
     }
@@ -146,6 +149,7 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
+
         String check = "Password must contain a numeric digit";
         assertEquals(alertMessage, check);
     }
@@ -164,6 +168,7 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
+
         String check = "Password must contain only '@' and '+' special characters";
         assertEquals(alertMessage, check);
     }
@@ -181,6 +186,7 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
+
         String check = "No blank spaces";
         assertEquals(alertMessage, check);
     }
@@ -200,6 +206,7 @@ public class TestMain {
         driver.findElement(By.name("submit")).click();
         String alertMessage = driver.switchTo().alert().getText();
         System.out.print(alertMessage);
+
         String check = "Logged in";
         assertEquals(alertMessage, check);
     }
